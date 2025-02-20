@@ -9,27 +9,15 @@
 </head>
 <body>
     <div class="container">
-         <!-- Restart Button -->
-         <button id="restartBtn" class="restart-btn">Restart</button>
-
+        <button id="restartBtn" class="restart-btn">Restart</button>
         <h1>Typing Speed Test</h1>
         <p id="sentence"></p> <!-- Display the sentence here -->
-        <textarea id="typedText" placeholder="Start typing here..."></textarea>
+        <textarea id="typedText" placeholder="Start typing here..." autocomplete="off" spellcheck="false"></textarea>
         <div class="stats">
             <p id="time">Time: 0s</p>
             <p id="wpm">WPM: 0</p>
             <p id="accuracy">Accuracy: 0%</p>
         </div>
-        
     </div>
-    <script>
-        // Add an event listener to detect the "Enter" key
-        document.getElementById("typedText").addEventListener("keydown", function (event) {
-            if (event.key === "Enter") {
-                event.preventDefault(); // Prevent default behavior of a new line
-                document.getElementById("submitBtn").click(); // Trigger the click event
-            }  
-        });
-    </script>
 </body>
 </html>
